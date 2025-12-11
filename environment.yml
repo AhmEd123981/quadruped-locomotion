@@ -1,0 +1,49 @@
+name: quadruped-rl
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip>=23.0
+
+  # Core Scientific Computing
+  - numpy=1.24.3
+  - scipy=1.11.1
+  - pandas=2.0.3
+
+  # PyTorch (adjust for your CUDA version)
+  - pytorch=2.0.1
+  - torchvision=0.15.2
+  - pytorch-cuda=11.8  # Use pytorch-cuda=11.7 or cpuonly if needed
+
+  # Visualization
+  - matplotlib=3.7.2
+  - seaborn=0.12.2
+
+  # Jupyter
+  - jupyter=1.0.0
+  - ipykernel=6.25.0
+  - notebook=7.0.2
+
+  # Development Tools
+  - pytest=7.4.0
+  - black=23.7.0
+  - flake8=6.1.0
+  - ipython=8.14.0
+
+  # Utilities
+  - pyyaml=6.0.1
+  - tqdm=4.65.0
+
+  # Install via pip (not available in conda or better to use pip)
+  - pip:
+      - stable-baselines3==2.1.0
+      - gymnasium==0.29.1
+      - sb3-contrib==2.1.0
+      - pybullet==3.2.5
+      - tensorboard==2.13.0
+      - wandb==0.15.8
+      - imageio==2.31.1
+      - imageio-ffmpeg==0.4.8

@@ -1,4 +1,4 @@
-best_val_loss: 0.33549319580197334
+best_val_loss: 0.0026507898838894002
 config:
   batch_size: 64
   bc_params:
@@ -27,8 +27,8 @@ config:
   n_epochs: 100
   n_eval_episodes: 10
   verbose: 1
-final_train_loss: 0.24212985223447772
-mean_reward: 0.01734895721074281
+final_train_loss: 0.002589311534949256
+mean_reward: 0.029061740679026116
 n_epochs_trained: 11
 seed: 42
 std_reward: 0.0

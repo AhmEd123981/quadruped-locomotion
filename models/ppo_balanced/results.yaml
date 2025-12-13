@@ -1,8 +1,10 @@
 config:
   checkpoint_freq: 50000
   env_params:
+    gait_weight: 0.4
     max_episode_steps: 1000
-    reward_type: speed
+    reward_type: balanced
+    speed_weight: 0.6
     target_velocity: 0.5
     time_step: 0.01
   eval_freq: 10000
@@ -32,8 +34,22 @@ config:
     verbose: 1
     vf_coef: 0.5
   render: false
+  reward_config:
+    action_magnitude_penalty: 0.01
+    action_smoothness_penalty: 0.005
+    fall_penalty: -10.0
+    gait_deviation_scale: 1.0
+    gait_preservation_weight: 0.1
+    gait_weight: 0.4
+    height_stability_scale: 10.0
+    max_tilt_threshold: 1.047
+    min_height_threshold: 0.15
+    orientation_stability_scale: 5.0
+    speed_error_scale: 2.0
+    speed_weight: 0.6
+    target_height: 0.3
   total_timesteps: 1000000
-mean_reward: 10.917550600000002
+mean_reward: 9.92916615
 seed: 42
-std_reward: 2.130727575305638e-06
+std_reward: 0.07375693680886898
 total_timesteps: 1000000

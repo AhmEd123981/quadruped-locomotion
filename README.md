@@ -85,7 +85,7 @@ source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 
 # 6. Install PyTorch with CUDA 11.8 support 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudio --index-url 
 
 # 7. Install all project dependencies
 pip install -r requirements.txt

@@ -66,7 +66,7 @@ CUDA	  11.8
 
 CMake	3.20	
 Git	2.30
-________________________________________
+
 Python Environment Setup
 Option 1: Virtual Environment
 Recommended for this project - simpler, faster setup.
@@ -103,7 +103,6 @@ print(f"GPU available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"GPU: {torch.cuda.get_device_name(0)}")
 EOF
-________________________________________
 
 What I Installed
 Core ML/RL Libraries
@@ -133,7 +132,7 @@ imageio-ffmpeg==0.4.8
 Configuration & Utilities
 pyyaml==6.0.1               
 tqdm==4.65.0                
-________________________________________
+
 Verify Everything Works
 Quick Test Script
 # Run this to verify all components work together
@@ -341,10 +340,10 @@ reward_gait_preservation_weight: 0.4
 Description of the Obtained Results
 Overview
 This project successfully trained three quadruped locomotion models using a hybrid Behavior Cloning + PPO approach. The main contribution is a balanced reward function that optimizes both speed performance and gait stability, achieving 24.8% higher cumulative reward than the baseline speed-only approach.
-________________________________________
+
 Key Results Summary
 Overall Performance Metrics
-Metric	BC Baseline	PPO Baseline	PPO Balanced ⭐
+Metric	BC Baseline	PPO Baseline	PPO Balanced 
 Mean Reward	-	497.51	620.70
 Reward Improvement	-	Baseline	+24.8%
 Forward Speed (m/s)	0.45	0.49	0.00

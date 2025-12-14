@@ -1,4 +1,7 @@
-
+"""
+Demo script for visualizing trained policy.
+Loads a trained model and runs it in the environment.
+"""
 
 import argparse
 import time
@@ -51,7 +54,7 @@ def main():
     # Create environment
     env = DummyVecEnv([make_env(render=args.render)])
     
-    # Load normalization 
+    # Load normalization stats if provided
     if args.vec_normalize:
         print(f"Loading VecNormalize stats from {args.vec_normalize}")
         env = VecNormalize.load(args.vec_normalize, env)

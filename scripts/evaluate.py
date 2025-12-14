@@ -1,3 +1,7 @@
+"""
+Evaluation script for quantitative assessment of trained models.
+Computes detailed metrics and saves results.
+"""
 
 import argparse
 import json

@@ -1,4 +1,6 @@
-
+"""
+Generate realistic quadruped locomotion demonstration data.
+"""
 
 import numpy as np
 import pickle

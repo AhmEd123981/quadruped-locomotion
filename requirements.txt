@@ -1,0 +1,40 @@
+# Core Dependencies - Python 3.13 compatible
+numpy>=1.26.0
+torch==2.7.1
+torchvision>=0.18.0
+torchaudio>=2.7.0
+
+# Reinforcement Learning
+stable-baselines3>=2.2.0
+gymnasium>=0.29.1
+sb3-contrib>=2.2.0
+
+# Physics Simulation
+pybullet>=3.2.5
+
+# Data Processing and Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+pandas>=2.1.0
+scipy>=1.11.0
+
+# Training Monitoring
+tensorboard>=2.14.0
+wandb>=0.15.0
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.66.0
+imageio>=2.33.0
+imageio-ffmpeg>=0.4.9
+
+# Development Tools (optional)
+pytest>=7.4.0
+black>=23.12.0
+flake8>=6.1.0
+ipython>=8.18.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.27.0
+notebook>=7.0.0

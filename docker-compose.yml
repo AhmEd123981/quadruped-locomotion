@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  quadruped-rl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: quadruped-rl:latest
+    container_name: quadruped-rl-container
+    
+    # GPU support (requires nvidia-docker)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    
+    # Mount volumes for data persistence
+    volumes:
+      - ./src:/workspace/src
+      - ./scripts:/workspace/scripts
+      - ./config:/workspace/config
+      - ./notebooks:/workspace/notebooks
+      - ./models:/workspace/models
+      - ./data:/workspace/data
+      - ./logs:/workspace/logs
+      - ./results:/workspace/results
+    
+    # Environment variables
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - PYTHONUNBUFFERED=1
+    
+    # Keep container running
+    stdin_open: true
+    tty: true
+    
+    # Expose ports for TensorBoard and Jupyter
+    ports:
+      - "6006:6006"  # TensorBoard
+      - "8888:8888"  # Jupyter
+    
+    # Override command for interactive use
+    command: /bin/bash
+
+  # Optional: TensorBoard service
+  tensorboard:
+    image: quadruped-rl:latest
+    container_name: tensorboard
+    volumes:
+      - ./logs:/workspace/logs
+    ports:
+      - "6007:6006"
+    command: tensorboard --logdir=/workspace/logs --host=0.0.0.0 --port=6006
+    depends_on:
+      - quadruped-rl

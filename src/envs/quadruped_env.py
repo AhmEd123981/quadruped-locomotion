@@ -1,4 +1,6 @@
-
+"""
+Quadruped Environment - FIXED
+"""
 
 import numpy as np
 import pybullet as p
@@ -8,7 +10,7 @@ from gymnasium import spaces
 
 
 class QuadrupedEnv(gym.Env):
-    
+    """Quadruped environment"""
     
     metadata = {'render_modes': ['human', 'rgb_array']}
     

@@ -1,0 +1,434 @@
+{
+  "model_path": "models/ppo_balanced/best_model.zip",
+  "num_episodes": 50,
+  "deterministic": true,
+  "seed": 42,
+  "metrics": {
+    "reward": {
+      "mean": 620.7029418945312,
+      "std": 0.0,
+      "min": 620.7029418945312,
+      "max": 620.7029418945312,
+      "median": 620.7029418945312
+    },
+    "steps": {
+      "mean": 1000.0,
+      "std": 0.0,
+      "min": 1000,
+      "max": 1000
+    },
+    "success_rate": 1.0,
+    "speed": {
+      "mean": 7.192630344242448e-06,
+      "std": 0.0,
+      "min": 7.192630344242448e-06,
+      "max": 7.192630344242448e-06
+    },
+    "gait_stability": {
+      "mean": 0.999995333398082,
+      "std": 0.0
+    }
+  },
+  "episode_data": [
+    {
+      "episode": 0,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 1,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 2,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 3,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 4,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 5,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 6,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 7,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 8,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 9,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 10,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 11,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 12,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 13,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 14,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 15,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 16,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 17,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 18,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 19,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 20,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 21,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 22,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 23,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 24,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 25,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 26,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 27,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 28,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 29,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 30,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 31,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 32,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 33,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 34,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 35,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 36,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 37,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 38,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 39,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 40,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 41,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 42,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 43,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 44,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 45,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 46,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 47,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 48,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    },
+    {
+      "episode": 49,
+      "reward": 620.7029418945312,
+      "steps": 1000,
+      "success": true,
+      "speed": 7.192630344242448e-06,
+      "gait_stability": 0.999995333398082
+    }
+  ]
+}

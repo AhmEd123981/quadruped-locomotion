@@ -1,7 +1,3 @@
-"""
-Comprehensive results comparison and visualization tool.
-Compares BC baseline, PPO baseline, and PPO balanced reward methods.
-"""
 
 import argparse
 import json
@@ -34,10 +30,10 @@ def load_results(results_dir):
         try:
             return yaml.safe_load(f)
         except yaml.constructor.ConstructorError:
-            # If safe_load fails due to Python objects, use unsafe load
-            f.seek(0)  # Reset file pointer
+           
+            f.seek(0)  
             results = yaml.unsafe_load(f)
-            # Clean up the config to remove non-serializable objects
+            
             if 'config' in results:
                 results['config'] = clean_config(results['config'])
             return results
@@ -53,7 +49,7 @@ def clean_config(config):
             elif isinstance(value, str) or isinstance(value, (int, float, bool)) or value is None:
                 cleaned[key] = value
             else:
-                # Skip non-serializable objects
+               
                 cleaned[key] = str(type(value).__name__)
         return cleaned
     elif isinstance(config, list):
@@ -68,19 +64,19 @@ def evaluate_model(model_path, vec_normalize_path=None, n_episodes=50):
     """Evaluate a trained model."""
     print(f"\nEvaluating: {model_path}")
     
-    # Create environment
+    
     env = DummyVecEnv([lambda: Monitor(QuadrupedEnv(render=False))])
     
-    # Load normalization if available
+    
     if vec_normalize_path and Path(vec_normalize_path).exists():
         env = VecNormalize.load(vec_normalize_path, env)
         env.training = False
         env.norm_reward = False
     
-    # Load model
+    
     model = PPO.load(model_path, env=env)
     
-    # Evaluate
+    
     episode_rewards = []
     episode_lengths = []
     
@@ -195,7 +191,7 @@ def create_comparison_plots(results_dict, output_dir):
     ax.set_ylim([0, 100])
     ax.grid(True, alpha=0.3, axis='y')
     
-    # Add percentage labels
+    #  percentage labels
     for bar, rate in zip(bars, success_rates):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height,
@@ -299,7 +295,7 @@ def main():
     
     # Load or evaluate BC model
     if Path(args.bc_dir).exists():
-        print(f"\n📊 BC Baseline ({args.bc_dir})")
+        print(f"\n BC Baseline ({args.bc_dir})")
         bc_results = load_results(args.bc_dir)
         if bc_results:
             results_dict['BC Baseline'] = bc_results
@@ -307,7 +303,7 @@ def main():
     
     # Load or evaluate PPO baseline
     if Path(args.ppo_baseline_dir).exists():
-        print(f"\n📊 PPO Baseline ({args.ppo_baseline_dir})")
+        print(f"\n PPO Baseline ({args.ppo_baseline_dir})")
         
         if not args.skip_eval:
             model_path = Path(args.ppo_baseline_dir) / 'best_model.zip'
@@ -326,7 +322,7 @@ def main():
     
     # Load or evaluate PPO balanced
     if Path(args.ppo_balanced_dir).exists():
-        print(f"\n📊 PPO Balanced ({args.ppo_balanced_dir})")
+        print(f"\n PPO Balanced ({args.ppo_balanced_dir})")
         
         if not args.skip_eval:
             model_path = Path(args.ppo_balanced_dir) / 'best_model.zip'
@@ -371,7 +367,7 @@ def main():
     print(f"✓ Saved detailed results: {output_dir / 'detailed_results.json'}")
     
     print("\n" + "="*70)
-    print("✅ COMPARISON COMPLETE!")
+    print(" COMPARISON COMPLETE!")
     print("="*70)
     print(f"\nResults saved to: {output_dir}")
     print("\nGenerated files:")

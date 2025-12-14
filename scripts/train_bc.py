@@ -1,7 +1,4 @@
-"""
-Training script for Behavior Cloning (BC) stage.
-Pre-trains the policy using expert demonstrations.
-"""
+
 
 import argparse
 import os

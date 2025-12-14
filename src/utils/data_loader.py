@@ -1,6 +1,4 @@
-"""
-Utilities for loading and processing demonstration data.
-"""
+
 
 import pickle
 import numpy as np
@@ -9,15 +7,7 @@ from typing import List, Dict, Tuple
 
 
 def load_demonstrations(file_path: str) -> List[Dict]:
-    """
-    Load expert demonstrations from file.
     
-    Args:
-        file_path: Path to demonstrations file (.pkl)
-        
-    Returns:
-        List of episode dictionaries containing observations and actions
-    """
     file_path = Path(file_path)
     
     if not file_path.exists():
@@ -42,15 +32,7 @@ def load_demonstrations(file_path: str) -> List[Dict]:
 def extract_transitions(
     demonstrations: List[Dict]
 ) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Extract all state-action pairs from demonstrations.
-    
-    Args:
-        demonstrations: List of episode dictionaries
-        
-    Returns:
-        Tuple of (observations, actions) as numpy arrays
-    """
+   
     all_observations = []
     all_actions = []
     
@@ -70,18 +52,7 @@ def split_demonstrations(
     shuffle: bool = True,
     random_seed: int = 42
 ) -> Tuple[List[Dict], List[Dict]]:
-    """
-    Split demonstrations into train and validation sets.
     
-    Args:
-        demonstrations: List of episode dictionaries
-        train_ratio: Ratio of episodes for training
-        shuffle: Whether to shuffle episodes before splitting
-        random_seed: Random seed for reproducibility
-        
-    Returns:
-        Tuple of (train_demos, val_demos)
-    """
     np.random.seed(random_seed)
     
     demos = demonstrations.copy()
@@ -99,15 +70,7 @@ def split_demonstrations(
 def compute_demonstration_statistics(
     demonstrations: List[Dict]
 ) -> Dict:
-    """
-    Compute statistics about demonstration data.
     
-    Args:
-        demonstrations: List of episode dictionaries
-        
-    Returns:
-        Dictionary of statistics
-    """
     num_episodes = len(demonstrations)
     
     episode_lengths = [len(ep['observations']) for ep in demonstrations]
@@ -155,17 +118,7 @@ def normalize_demonstrations(
     obs_mean: np.ndarray = None,
     obs_std: np.ndarray = None
 ) -> Tuple[List[Dict], np.ndarray, np.ndarray]:
-    """
-    Normalize observations in demonstrations.
-    
-    Args:
-        demonstrations: List of episode dictionaries
-        obs_mean: Pre-computed observation mean (optional)
-        obs_std: Pre-computed observation std (optional)
-        
-    Returns:
-        Tuple of (normalized_demos, obs_mean, obs_std)
-    """
+   
     # Compute normalization statistics if not provided
     if obs_mean is None or obs_std is None:
         all_obs = []
@@ -193,13 +146,7 @@ def save_demonstrations(
     demonstrations: List[Dict],
     file_path: str
 ):
-    """
-    Save demonstrations to file.
     
-    Args:
-        demonstrations: List of episode dictionaries
-        file_path: Output file path
-    """
     file_path = Path(file_path)
     file_path.parent.mkdir(parents=True, exist_ok=True)
     
@@ -215,18 +162,7 @@ def create_dummy_demonstrations(
     obs_dim: int = 37,
     action_dim: int = 12
 ) -> List[Dict]:
-    """
-    Create dummy demonstrations for testing.
     
-    Args:
-        num_episodes: Number of episodes
-        episode_length: Steps per episode
-        obs_dim: Observation dimension
-        action_dim: Action dimension
-        
-    Returns:
-        List of dummy episode dictionaries
-    """
     demonstrations = []
     
     for _ in range(num_episodes):

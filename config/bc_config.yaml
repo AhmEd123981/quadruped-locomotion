@@ -12,7 +12,7 @@ env_params:
 # BC Training Parameters
 bc_params:
   learning_rate: 1.0e-3
-  optimizer: "adam"
+  optimizer: "Ahmed "
   
   # Policy Network Architecture
   policy_kwargs:

@@ -1,7 +1,4 @@
-"""
-Training script for PPO fine-tuning stage.
-Fine-tunes BC pre-trained policy using PPO with custom reward function.
-"""
+
 
 import argparse
 import os
@@ -107,7 +104,7 @@ def main():
     
     # Normalize observations and rewards
     if config.get('normalize', True):
-        print("✓ Applying VecNormalize wrapper")
+        print(" Applying VecNormalize wrapper")
         env = VecNormalize(
             env,
             norm_obs=True,
@@ -182,13 +179,13 @@ def main():
         # Try to load BC weights into PPO policy
         try:
             bc_checkpoint = torch.load(args.bc_checkpoint, map_location=args.device)
-            print("✓ BC checkpoint loaded")
+            print(" BC checkpoint loaded")
             
             # Note: Direct weight transfer from BC to PPO is tricky
             # For now, we'll just train PPO from scratch
-            print("⚠ Training PPO from scratch (BC weight transfer not implemented)")
+            print(" Training PPO from scratch (BC weight transfer not implemented)")
         except Exception as e:
-            print(f"⚠ Could not load BC weights: {e}")
+            print(f" Could not load BC weights: {e}")
             print("Training PPO from scratch")
     else:
         print("Training PPO from scratch (no BC initialization)")
@@ -213,11 +210,11 @@ def main():
             seed=args.seed
         )
     
-    print(f"✓ PPO model initialized")
-    print(f"✓ Device: {model.device}")
-    print(f"✓ Learning rate: {model.learning_rate}")
-    print(f"✓ Steps per update: {model.n_steps}")
-    print(f"✓ Batch size: {model.batch_size}")
+    print(f" PPO model initialized")
+    print(f" Device: {model.device}")
+    print(f" Learning rate: {model.learning_rate}")
+    print(f" Steps per update: {model.n_steps}")
+    print(f" Batch size: {model.batch_size}")
     
     print("\n" + "="*60)
     print("SETTING UP CALLBACKS")
